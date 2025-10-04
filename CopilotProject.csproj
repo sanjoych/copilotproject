@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- Exclude test project sources placed under the unittest folder from the main project
+       so they aren't compiled into this assembly (prevents duplicate assembly attributes
+       and missing test-framework references). -->
+  <ItemGroup>
+    <Compile Remove="unittest\**\*.cs" />
+    <None Remove="unittest\**\*" />
+    <EmbeddedResource Remove="unittest\**\*" />
+  </ItemGroup>
+
 </Project>
