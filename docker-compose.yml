@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  copilotproject:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: copilot-project
+    restart: unless-stopped
