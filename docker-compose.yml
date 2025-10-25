@@ -6,4 +6,5 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: copilot-project
-    restart: unless-stopped
+    restart: "no"
+    command: ["127.0.0.1 80"]  # Default IP address

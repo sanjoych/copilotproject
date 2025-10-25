@@ -18,15 +18,4 @@
     <EmbeddedResource Remove="unittest\**\*" />
   </ItemGroup>
 
-  <!-- Docker build targets -->
-  <Target Name="CheckDockerCompose" BeforeTargets="BuildDockerImage">
-    <Exec Command="powershell -Command &quot;&amp; {if (!(Get-Command docker-compose -ErrorAction SilentlyContinue)) { winget install Docker.DockerDesktop }}&quot;" 
-          IgnoreExitCode="false"
-          StandardOutputImportance="low" />
-  </Target>
-
-  <Target Name="BuildDockerImage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'" DependsOnTargets="CheckDockerCompose">
-    <Exec Command="docker-compose build" WorkingDirectory="$(MSBuildProjectDirectory)" />
-  </Target>
-
 </Project>
