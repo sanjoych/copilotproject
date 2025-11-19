@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CopilotProject": {
+      "commandName": "Project",
+      "commandLineArgs": "tcpbin.com 4242"
+    }
+  }
+}

@@ -40,7 +40,7 @@ class Program
 			}
 		}
 
-		var result = DoSocketIO.SendAndReceive(ip, port, "Hello");
+		var result = DoSocketIO.SendAndReceive(ip, port, "Hello\n");
 		Console.WriteLine(result);
 	}
 }
